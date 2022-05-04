@@ -10,12 +10,14 @@ const people = [
 function App() {
   return (
     <div className="App">
-      {people.map(person => {
+      {people.map((person,i) => {
 
-        return <PersonComponent firstName={person.firstName} lastName={person.lastName} age={person.age} hairColor={person.hairColor} />
-
+        return <PersonComponent key={i} firstName={person.firstName} lastName={person.lastName} age={person.age} hairColor={person.hairColor} />
       })
+      
       }
+      
+      
 
     </div>
   );
